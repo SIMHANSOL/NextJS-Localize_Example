@@ -71,7 +71,7 @@ const Home: NextPage<iProps> = (props: iProps) => {
 export default Home
 
 export function getStaticProps(context: any) {
-  const translate = localize(context)
+  const translate = localize(context.locale, "common")
 
   return { props: { translate } }
 }

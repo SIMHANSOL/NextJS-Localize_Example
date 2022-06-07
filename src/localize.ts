@@ -1,6 +1,6 @@
-function translate(context: any) {
+function translate(locale: any, fileName: string) {
   const fs = require("fs")
-  const file = fs.readFileSync(`./public/localizes/${context.locale}/common.json`, "utf-8")
+  const file = fs.readFileSync(`./public/localizes/${locale}/${fileName}.json`, "utf-8")
   return JSON.parse(file)
 }
 
